@@ -58,14 +58,3 @@ spring:
     password: 123456
     db-name: guns #用来搜集数据库的所有表
     filters: wall,mergeStat
-
-#多数据源情况的配置
-guns:
-  muti-datasource:
-    open: false
-    url: jdbc:mysql://127.0.0.1:3306/winsun_admin?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&serverTimezone=UTC
-    username: root
-    password: 123456
-    dataSourceNames:
-      - dataSourceGuns
-      - dataSourceBiz
