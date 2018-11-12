@@ -1,0 +1,29 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8886/eureka/
+  instance:
+    prefer-ip-address: true
+server:
+  port: 10000
+spring:
+  application:
+    name: zuul-service
+zuul:
+  routes:
+    api-a:
+      sensitiveHeaders: Authorization
+      path: /winsun/**
+      service-id: winsun-service
+
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: false
+ribbon:
+    ReadTimeout: 60000
+    ConnectTimeout: 60000
+    #MaxAutoRetries: 1
+    #MaxAutoRetriesNextServer: 2
