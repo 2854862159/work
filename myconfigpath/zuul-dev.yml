@@ -18,7 +18,8 @@ zuul:
     api-b:
       sensitiveHeaders: Authorization
       path: /winsun/**
-      service-id: service-order-feign
+      service-id: winsun-service
+
 hystrix:
   command:
     default:
