@@ -5,15 +5,19 @@ eureka:
   instance:
     prefer-ip-address: true
 server:
-  port: 8769
+  port: 10000
 spring:
   application:
-    name: service-zuul
+    name: zuul-service
 zuul:
   routes:
     api-a:
       sensitiveHeaders: Authorization
       path: /api-fegin-user/**
+      service-id: service-order-feign
+    api-b:
+      sensitiveHeaders: Authorization
+      path: /winsun/**
       service-id: service-order-feign
 hystrix:
   command:
