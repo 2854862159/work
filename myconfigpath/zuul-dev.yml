@@ -10,6 +10,9 @@ spring:
   application:
     name: zuul-service
 zuul:
+  host:
+    max-total-connections: 500
+    max-per-route-connections: 250
   routes:
     api-a:
       sensitiveHeaders: 
