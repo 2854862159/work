@@ -52,6 +52,4 @@ spring:
 mybatis-plus:
   typeAliasesPackage: com.winsun.item.modular.system.model
 
-log:
-  path: guns-logs
 
