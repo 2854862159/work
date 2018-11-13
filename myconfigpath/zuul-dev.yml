@@ -12,9 +12,13 @@ spring:
 zuul:
   routes:
     api-a:
-      sensitiveHeaders: Authorization
+      sensitiveHeaders: 
       path: /winsun/**
       service-id: winsun-service
+    api-b:
+      sensitiveHeaders: 
+      path: /order/**
+      service-id: service-order-feign
 
 hystrix:
   command:
