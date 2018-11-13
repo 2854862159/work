@@ -1,5 +1,6 @@
 eureka:
   client:
+    registry-fetch-interval-seconds: 5
     serviceUrl:
       defaultZone: http://localhost:8886/eureka/
   instance:
